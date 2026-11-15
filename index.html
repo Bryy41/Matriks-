@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="visual.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="judul">Quantriks</h1>
+      <h2 class="subjudul">Menghitung Matriks Ordo 2x2</h2>
+    </header>
+
+    <div class="explain">
+      <p class="text-explain">Apa sih matriks itu?</p>
+      <div class="explain-area">
+        Matriks adalah susunan bilangan dalam baris dan kolom yang ukurannya
+        disebut ordo (baris x kolom). Operasi dasarnya meliputi penjumlahan dan
+        pengurangan serta perkalian.
+      </div>
+    </div>
+
+    <div class="calculator">
+      <section class="matriks-area">
+        <div class="matriks">
+          <div class="matriks-item">
+            <h3 class="matriks-name">A</h3>
+            <div class="matriks-grid">
+              <input id="a" type="number" />
+              <input id="b" type="number" />
+              <input id="c" type="number" />
+              <input id="d" type="number" />
+            </div>
+          </div>
+
+          <div class="matriks-item">
+            <h3 class="matriks-name">B</h3>
+            <div class="matriks-grid">
+              <input id="e" type="number" />
+              <input id="f" type="number" />
+              <input id="g" type="number" />
+              <input id="h" type="number" />
+            </div>
+          </div>
+        </div>
+
+        <button class="tombol" id="tombol-hapus">Kosongkan</button>
+      </section>
+    </div>
+
+    <section class="buttons">
+      <p class="text-operasi">Operasi Hitung :</p>
+      <button class="tombol" id="tombol-tambah">A + B</button>
+      <button class="tombol" id="tombol-kurang">A - B</button>
+      <button class="tombol" id="tombol-kali">A x B</button>
+    </section>
+
+    <div class="text-hasil">
+      <p>Hasilnya :</p>
+    </div>
+
+    <section class="matriks-answer">
+      <p id="hasil">Isi matriksnya dan pilih operasinya</p>
+
+      <div class="hasil-grid">
+        <div class="sel" id="r1"></div>
+        <div class="sel" id="r2"></div>
+        <div class="sel" id="r3"></div>
+        <div class="sel" id="r4"></div>
+      </div>
+    </section>
+
+    <script src="ngitung.js"></script>
+  </body>
+</html>

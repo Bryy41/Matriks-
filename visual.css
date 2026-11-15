@@ -1,0 +1,254 @@
+:root {
+  --bg: #1e2e4f;
+  --font-family: "Montserrat", serif;
+  --black: rgb(0, 0, 0);
+  --blue2: #2b4785;
+  --blue3: #8fb3e2;
+  --blue4: #6aaaff;
+  --white: #d9e1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.judul {
+  text-align: center;
+  font-size: clamp(2rem, 8vh, 3 rem);
+  color: white;
+  font-family: var(--font-family);
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.subjudul {
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  font-family: var(--font-family);
+  font-weight: solid;
+  margin-top: 18px;
+}
+
+.matriks-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+}
+
+.matriks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.matriks-area {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--blue2), var(--bg));
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  align-items: center;
+}
+
+.matriks-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 80px);
+  grid-template-rows: 60px 60px;
+  gap: 10px;
+  max-width: 400px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+body {
+  /* background: linear-gradient(to left , #325297 , #467bde);*/
+  min-height: 100vh;
+  color: var(--white);
+  background:
+    linear-gradient(rgba(217, 225, 241, 0.104) 1px, transparent 1px) 0 0 / 60px
+      60px,
+    linear-gradient(90deg, rgba(217, 225, 241, 0.059) 1px, transparent 1px) 0
+      0 / 60px 60px,
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(106, 170, 255, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--bg) 0%, #121c33 100%);
+  background-attachment: fixed;
+}
+
+#tombol-hapus {
+  margin-top: 2px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, var(--blue2), var(--bg));
+  justify-content: center;
+  gap: 18px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid var(--white);
+}
+
+.tombol {
+  display: inline-block;
+  background: linear-gradient(to top, var(--blue3), var(--white));
+  padding: 18px 38px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.tombol:hover {
+  background: linear-gradient(to top, var(--blue3), var(--white));
+  transition: 0.4s ease;
+  letter-spacing: 0.03em;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.text-operasi {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.text-hasil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: var(--font-family);
+  color: white;
+}
+
+.matriks-answer {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--blue2), var(--bg));
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border-radius: 10px;
+  padding: 36px;
+  border: 1px solid var(--white);
+  font-family: var(--font-family);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+.hasil-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  grid-template-rows: repeat(2, 60px);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--blue3), var(--white));
+  color: var(--bg);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#hasil {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+input[type="number"] {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.explain {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--blue2), var(--bg));
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 1.3rem;
+  gap: 18px;
+  border-radius: 10px;
+  padding: 36px;
+  border: 1px solid var(--white);
+}
+
+.text-explain {
+  display: flex;
+  font-family: var(--font-family);
+}
+
+.explain-area {
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.matriks-area,
+.buttons,
+.matriks-answer,
+.explain {
+  width: min(95%, 620px);
+  margin: 18px auto;
+}
+
+@media (max-width: 480px) {
+  .matriks-area, .buttons {
+    padding: 14px;
+  }
+
+  .matriks-answer, .explain {
+    padding: 20px;
+  }
+
+  .tombol {
+    padding: 14px 24px;
+  }
+
+  .matriks-grid, .hasil-grid {
+    grid-template-columns: repeat(2, 70px);
+  }
+
+  .matriks-grid {
+    padding: 10px;
+    min-height: 0;
+  }
+}
