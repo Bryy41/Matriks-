@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="visual.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="judul">Penjelasan Operasi Hitung</h1>
+    </header>
+    <div class="btn-back">
+      <a href="index.html" class="tombol" id="tombol-back">Kembali</a>
+    </div>
+
+    <div class="explaining">
+      <section class="explaining-area">
+        <div class="explaining-penjumlahan">
+          <h2 class="kotak judul-kotak">Penjumlahan</h2>
+
+          <div class="kotak kiri">
+            <strong>Cara kerja</strong>
+            <p>
+              Jumlahkan]] elemen yang posisinya sama. Syaratnya, ordo kedua
+              matriks harus sama.
+            </p>
+            <ol class="langkah">
+              <li>
+                Jumlahin pasangannya:
+                <ul>
+                  <li>Kiri atas: a + e</li>
+                  <li>Kanan atas: b + f</li>
+                  <li>Kiri bawah: c + g</li>
+                  <li>Kanan bawah: d + h</li>
+                </ul>
+              </li>
+              <li>Susun hasilnya ke matriks baru di posisi yang sama.</li>
+            </ol>
+          </div>
+
+          <div class="kotak">
+            <strong>Contoh</strong>
+            <div class="contoh-matriks">
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">1</div>
+                  <div class="sel">2</div>
+                  <div class="sel">3</div>
+                  <div class="sel">4</div>
+                </div>
+                <span>A</span>
+              </div>
+
+              <span class="operator">+</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">5</div>
+                  <div class="sel">6</div>
+                  <div class="sel">7</div>
+                  <div class="sel">8</div>
+                </div>
+                <span>B</span>
+              </div>
+
+              <span class="operator">=</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">6</div>
+                  <div class="sel">8</div>
+                  <div class="sel">10</div>
+                  <div class="sel">12</div>
+                </div>
+                <span>Hasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="explaining-pengurangan">
+          <h2 class="kotak judul-kotak">Pengurangan</h2>
+
+          <div class="kotak kiri">
+            <strong>Cara kerja</strong>
+            <p>
+              Kurangkan elemen yang posisinya sama. Syaratnya sama, ordo harus
+              sama.
+            </p>
+            <ol class="langkah">
+              <li>
+                Kurangin ordo A dengan elemen B:
+                <ul>
+                  <li>Kiri atas: a - e</li>
+                  <li>Kanan atas: b - f</li>
+                  <li>Kiri bawah: c - g</li>
+                  <li>Kanan bawah: d - h</li>
+                </ul>
+              </li>
+              <li>
+                Susun hasilnya ke matriks baru.
+              </li>
+            </ol>
+          </div>
+
+          <div class="kotak">
+            <strong>Contoh</strong>
+            <div class="contoh-matriks">
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">1</div>
+                  <div class="sel">2</div>
+                  <div class="sel">3</div>
+                  <div class="sel">4</div>
+                </div>
+                <span>A</span>
+              </div>
+
+              <span class="operator">-</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">5</div>
+                  <div class="sel">6</div>
+                  <div class="sel">7</div>
+                  <div class="sel">8</div>
+                </div>
+                <span>B</span>
+              </div>
+
+              <span class="operator">=</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">-4</div>
+                  <div class="sel">-4</div>
+                  <div class="sel">-4</div>
+                  <div class="sel">-4</div>
+                </div>
+                <span>Hasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="explaining-perkalian">
+          <h2 class="kotak judul-kotak">Perkalian</h2>
+
+          <div class="kotak kiri">
+            <strong>Cara kerja</strong>
+            <p>
+              Baris matriks A dikali kolom matriks B, lalu hasilnya dijumlahkan.
+            </p>
+            <ol class="langkah">
+              <li>Ambil satu baris dari A dan satu kolom dari B.</li>
+              <li>
+                Kalikan pasangannya, lalu jumlahkan:
+                <ul>
+                  <li>Kiri atas: (a x e) + (b x g)</li>
+                  <li>Kanan atas: (a x f) + (b x h)</li>
+                  <li>Kiri bawah: (c x e) + (d x g)</li>
+                  <li>Kanan bawah: (c x f) + (d x h)</li>
+                </ul>
+              </li>
+              <li>
+                Susun keempat hasilnya ke matriks baru.
+              </li>
+            </ol>
+          </div>
+
+          <div class="kotak">
+            <strong>Contoh</strong>
+            <div class="contoh-matriks">
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">1</div>
+                  <div class="sel">2</div>
+                  <div class="sel">3</div>
+                  <div class="sel">4</div>
+                </div>
+                <span>A</span>
+              </div>
+
+              <span class="operator">x</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">5</div>
+                  <div class="sel">6</div>
+                  <div class="sel">7</div>
+                  <div class="sel">8</div>
+                </div>
+                <span>B</span>
+              </div>
+
+              <span class="operator">=</span>
+
+              <div class="item-matriks">
+                <div class="mini-grid">
+                  <div class="sel">19</div>
+                  <div class="sel">22</div>
+                  <div class="sel">43</div>
+                  <div class="sel">50</div>
+                </div>
+                <span>Hasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </body>
+</html>

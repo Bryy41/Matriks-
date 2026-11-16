@@ -1,6 +1,6 @@
 :root {
   --bg: #1e2e4f;
-  --font-family: "Montserrat", serif;
+  --font-family: "Montserrat", sans-serif;
   --black: rgb(0, 0, 0);
   --blue2: #2b4785;
   --blue3: #8fb3e2;
@@ -16,7 +16,7 @@
 
 .judul {
   text-align: center;
-  font-size: clamp(2rem, 8vh, 3 rem);
+  font-size: clamp(2rem, 8vh, 3rem);
   color: white;
   font-family: var(--font-family);
   margin-top: 20px;
@@ -70,6 +70,11 @@
   min-height: 200px;
 }
 
+.matriks-grid ::placeholder {
+  color: #0000006a;
+  text-align: center;
+}
+
 body {
   /* background: linear-gradient(to left , #325297 , #467bde);*/
   min-height: 100vh;
@@ -90,6 +95,9 @@ body {
 
 #tombol-hapus {
   margin-top: 2px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .buttons {
@@ -222,20 +230,146 @@ input[type="number"] {
   text-align: justify;
 }
 
+.btn-explain {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+a {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #121c33;
+}
+
 .matriks-area,
 .buttons,
 .matriks-answer,
-.explain {
+.explain,
+.btn-explain {
   width: min(95%, 620px);
   margin: 18px auto;
 }
 
+.btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.explaining {
+  padding: 20px;
+}
+
+.explaining-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.explaining-penjumlahan,
+.explaining-pengurangan,
+.explaining-perkalian {
+  flex: 0 1 340px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kotak {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to bottom, var(--blue2), var(--bg));
+  border: 1px solid var(--white);
+  border-radius: 10px;
+}
+
+.kotak.kiri {
+  text-align: left;
+}
+
+.kotak strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue4);
+}
+
+.kotak p {
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.judul-kotak {
+  font-size: 1.3rem;
+}
+
+.langkah,
+.langkah ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.langkah li {
+  margin-bottom: 6px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.contoh-matriks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.item-matriks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 36px);
+  grid-template-rows: repeat(2, 36px);
+  gap: 6px;
+}
+
+.mini-grid .sel {
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.operator {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 @media (max-width: 480px) {
-  .matriks-area, .buttons {
+  .matriks-area,
+  .buttons {
     padding: 14px;
   }
 
-  .matriks-answer, .explain {
+  .matriks-answer,
+  .explain {
     padding: 20px;
   }
 
@@ -243,12 +377,16 @@ input[type="number"] {
     padding: 14px 24px;
   }
 
-  .matriks-grid, .hasil-grid {
+  .matriks-grid,
+  .hasil-grid {
     grid-template-columns: repeat(2, 70px);
   }
 
   .matriks-grid {
     padding: 10px;
     min-height: 0;
+  }
+  .btn-explain {
+    padding: 10px;
   }
 }
